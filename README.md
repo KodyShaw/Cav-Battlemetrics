@@ -3,3 +3,5 @@
  this will install any needed node modules as this is a backend node appication
  
  To start or run the appication you must type 'node index.js' the rest should be in the terminal
+ 
+ Currently the project is in early devlopment and will not be able to do much at this time
