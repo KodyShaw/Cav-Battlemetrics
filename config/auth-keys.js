@@ -8,3 +8,4 @@ const AUTH_TOKEN = {
 
 module.exports = AUTH_TOKEN;
 
+// You might need to run 'git update-index --assume-unchanged config/auth-keys.js' in terminal to get this to work and not send to get on your end
