@@ -1,5 +1,5 @@
 const axios = require("axios");
-const AUTH_TOKEN = require("./auth-keys")
+
 
 
 //Can add other axios.create Intances here to save code in long run
@@ -9,7 +9,7 @@ const instance = {
         headers: {
             'Accept': 'aplication/json',
             'Content-Type': 'aplication/json',
-            'Authorization': `Bearer ${AUTH_TOKEN.cav}`
+            'Authorization': `Bearer ${process.env.CAV_KEY}`
         },
     })
 }
