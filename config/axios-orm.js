@@ -1,20 +1,17 @@
 //ORM to be used with the axios call functions.
 const orm = {
     axiosGet: (request, query, callbackFunction) => {
+        //console.log(request.defaults.baseURL + query)
         request.get(query).then(res => {
             callbackFunction(res.data);
         }).catch(err => {
             console.log("API Call Error");
             if (!err.response) {
+                //console log whole err if no response is found
                 console.log(err);
             }else {
                 console.log(`Status code: ${err.response.status}`);
-                if (err.response.data.message = undefined) {
-                    console.log(`API Message: ${err.response.data.message}`);
-                }
-                else {
-                    console.log(`API Error: ${err.response.data.error}`);
-                }
+                console.log(`API Error data:\n`, err.response.data);
             }
         });
     }
